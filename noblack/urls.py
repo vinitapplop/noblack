@@ -16,7 +16,7 @@ Including another URLconf
 from django.conf.urls import url
 from django.contrib import admin
 from volunteer import views as volunteerViews
-
+admin.site.site_header = "NoBlack Administration"
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$',volunteerViews.home,name="home"),
