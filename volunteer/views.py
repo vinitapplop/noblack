@@ -40,7 +40,8 @@ def enterVolunteer(request):
 
 def home(request):
     if (request.method == 'GET'):
-        return render(request, 'home.html', {})
+        volunteers = Volunteer.objects.all()
+        return render(request, 'home.html', {'volunteers': volunteers})
     else:
         state = request.POST.get('state')
         city = request.POST.get('city')
