@@ -20,7 +20,7 @@ from volunteer import views as volunteerViews
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$',volunteerViews.home,name="home"),
-    url(r'^/$',volunteerViews.home,name="home"),
+    # url(r'^/$',volunteerViews.home,name="home1"),
     url(r'^verify/',volunteerViews.verifyOTP,name="verify"),
     url(r'^fill/',volunteerViews.enterVolunteer,name="enterVolunteer"),
     url(r'^getStates/',volunteerViews.getStates,name="getStates"),
