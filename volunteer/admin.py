@@ -7,4 +7,6 @@ admin.site.register(State)
 admin.site.register(City)
 # Register your models here.
 admin.site.register(Category)
-admin.site.register(Volunteer)
+class VolunteerAdmin(admin.ModelAdmin):
+    list_display = ('first_name','last_name','category','mobile',)
+admin.site.register(Volunteer,VolunteerAdmin)
